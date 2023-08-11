@@ -1,1 +1,35 @@
-<p>layout works!</p>
+<div class="container">
+
+    <div class="toDo">
+
+        <div class="tasks">
+            <!-- <h1 class="taskTitle">The best way to predict the future is to plan for it.</h1> -->
+            <h1 class="taskTitle">ToDo list</h1>
+            <form class="form">
+                <div class="taskInfo">
+                    <mat-form-field class="formInputs">
+                        <mat-label>Task Name</mat-label>
+                        <input matInput>
+                    </mat-form-field>
+                    <mat-form-field class="formInputsHours">
+                        <mat-label>Time</mat-label>
+                        <input matInput >
+                    </mat-form-field>
+
+                </div>
+                <mat-form-field class="formInputs">
+                    <mat-label>Task Description</mat-label>
+                    <textarea matInput></textarea>
+                </mat-form-field>
+                <button type="button" mat-fab extended color="primary">
+                    <mat-icon>done</mat-icon>
+                    Add
+                </button>
+            </form>
+        </div>
+
+        <div class="list">
+    
+        </div>
+    </div>
+</div>
