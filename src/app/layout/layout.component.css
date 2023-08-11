@@ -4,11 +4,13 @@
     .toDo{
         display: flex;
         height: 100%;
+        gap: 50px;
 
         .tasks{
             text-align: center;
             width: 550px;
             height: 100%;
+            margin-left: 25px;
 
             .taskTitle{
                 margin-top: 35%;
@@ -39,6 +41,18 @@
                         max-height: 450px;
                     }
                 }
+            }
+        }
+
+        .list{
+            width: 1250px;
+            height: 95%;
+            margin: auto 0;
+
+            .listTitle{
+                width: 100%;
+                text-align: center;
+
             }
         }
     }
