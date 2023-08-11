@@ -16,7 +16,6 @@
 
             .form{
                 width: 100%;
-                height: auto;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
@@ -34,6 +33,11 @@
                 
                 .formInputs{
                     width: 85%;
+
+                    .taskTextArea{
+                        height: 25px;
+                        max-height: 450px;
+                    }
                 }
             }
         }

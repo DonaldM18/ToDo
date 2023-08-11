@@ -8,6 +8,7 @@ import { LayoutComponent } from './layout/layout.component';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
+import { ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,8 +20,8 @@ import { MatIconModule } from '@angular/material/icon';
     BrowserAnimationsModule,
     MatInputModule,
     MatButtonModule,
-    MatIconModule
-    
+    MatIconModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

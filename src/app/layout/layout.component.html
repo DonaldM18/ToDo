@@ -5,23 +5,26 @@
         <div class="tasks">
             <!-- <h1 class="taskTitle">The best way to predict the future is to plan for it.</h1> -->
             <h1 class="taskTitle">ToDo list</h1>
-            <form class="form">
+            <form class="form" [formGroup]="taskForm">
                 <div class="taskInfo">
                     <mat-form-field class="formInputs">
-                        <mat-label>Task Name</mat-label>
-                        <input matInput>
+                        <mat-label >Task Name</mat-label>
+                        <input matInput formControlName="taskName">
+                        <mat-error *ngIf="taskForm.controls['taskName'].hasError('required')"> Task name is <strong>required</strong> </mat-error>
                     </mat-form-field>
                     <mat-form-field class="formInputsHours">
                         <mat-label>Time</mat-label>
-                        <input matInput >
+                        <input type="number" matInput formControlName="taskTime">
+                        <mat-error *ngIf="taskForm.controls['taskTime'].hasError('required')">Item is <strong>required</strong> </mat-error>
                     </mat-form-field>
 
                 </div>
                 <mat-form-field class="formInputs">
                     <mat-label>Task Description</mat-label>
-                    <textarea matInput></textarea>
+                    <textarea class="taskTextArea" matInput formControlName="taskDescription"></textarea>
+                    <mat-error *ngIf="taskForm.controls['taskDescription'].hasError('required')"> Task description is <strong>required</strong> </mat-error>
                 </mat-form-field>
-                <button type="button" mat-fab extended color="primary">
+                <button type="button" mat-fab extended color="primary" (click)="saveTask()">
                     <mat-icon>done</mat-icon>
                     Add
                 </button>
